@@ -13,3 +13,14 @@ config_version=5
 config/name="bean-jam-game-03"
 run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.5", "Forward Plus")
+
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=180
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
