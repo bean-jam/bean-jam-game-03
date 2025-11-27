@@ -1,0 +1,21 @@
+[gd_resource type="TileSet" load_steps=3 format=3]
+
+[ext_resource type="Texture2D" uid="uid://cg7tedweyjqt0" path="res://assets/HELLNAHENVIRO_TILESHEET.png" id="1_rybh6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r14ik"]
+texture = ExtResource("1_rybh6")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+0:3/0 = 0
+4:3/0 = 0
+4:4/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_r14ik")
