@@ -1,16 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://c23s1t6vuxxby"]
 
 [ext_resource type="PackedScene" uid="uid://djkk8rkw5x3xv" path="res://player.tscn" id="1_uwrxv"]
-[ext_resource type="PackedScene" uid="uid://bc4j1vfpysadt" path="res://scenes/TILEMAP.tscn" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://rxp5xg5plyny" path="res://scenes/TILEMAP.tscn" id="1_yqjtg"]
 
 [node name="Game" type="Node2D"]
 
-[node name="TILEMAP" parent="." instance=ExtResource("1_yqjtg")]
-position = Vector2(-1, 1)
-
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(151, 115)
+z_index = 1
+position = Vector2(151, 98)
+
+[node name="TILEMAP" parent="." instance=ExtResource("1_yqjtg")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(151, 97)
-zoom = Vector2(2, 2)
+offset = Vector2(160, 90)
