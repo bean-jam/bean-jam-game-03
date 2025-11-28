@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://qncgeibev141"]
+
+[ext_resource type="Texture2D" uid="uid://cqoc6whnrmc5k" path="res://assets/objects/HELLNAH_HEAVENGATE.png" id="1_13xu8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4u5nq"]
+size = Vector2(96, 101)
+
+[sub_resource type="Gradient" id="Gradient_13xu8"]
+colors = PackedColorArray(1.353256, 1.2014508, 0.5523522, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4u5nq"]
+gradient = SubResource("Gradient_13xu8")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.87967914, 0.18315507)
+
+[node name="HeavenGate" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_13xu8")
+offset = Vector2(2, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1, 2.5)
+shape = SubResource("RectangleShape2D_4u5nq")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, 11)
+texture = SubResource("GradientTexture2D_4u5nq")
