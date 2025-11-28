@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deajf23ww6322"
-path="res://.godot/imported/GRIMMIE_SCYTHE-Sheet.png-ed8d41f462e0f6c2d2a6f527b033b292.ctex"
+uid="uid://sk42rypo3lip"
+path="res://.godot/imported/GHOSTIE_01_BLACK.png-67813f134c4ddc70376f6e031157df21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GRIMMIE_SCYTHE-Sheet.png"
-dest_files=["res://.godot/imported/GRIMMIE_SCYTHE-Sheet.png-ed8d41f462e0f6c2d2a6f527b033b292.ctex"]
+source_file="res://assets/sprites/GHOSTIE_01_BLACK.png"
+dest_files=["res://.godot/imported/GHOSTIE_01_BLACK.png-67813f134c4ddc70376f6e031157df21.ctex"]
 
 [params]
 

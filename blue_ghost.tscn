@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://c27fctxw2d8sn"]
+
+[ext_resource type="Script" uid="uid://b4bhdek7j2s5n" path="res://scripts/Ghost.gd" id="1_tci14"]
+[ext_resource type="Texture2D" uid="uid://i4wxiie7k5p3" path="res://assets/sprites/GHOSTIE_01_BLUE.png" id="2_tci14"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tci14"]
+size = Vector2(10, 14)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_be46r"]
+radius = 4.0
+
+[node name="BlueGhost" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_tci14")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tci14")
+
+[node name="QueueShape" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 6)
+shape = SubResource("RectangleShape2D_tci14")
+
+[node name="InteractShape" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -8)
+shape = SubResource("CircleShape2D_be46r")
