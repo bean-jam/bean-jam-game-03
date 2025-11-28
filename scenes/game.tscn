@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://c23s1t6vuxxby"]
+[gd_scene load_steps=6 format=3 uid="uid://c23s1t6vuxxby"]
 
-[ext_resource type="PackedScene" uid="uid://djkk8rkw5x3xv" path="res://player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://djkk8rkw5x3xv" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://rxp5xg5plyny" path="res://scenes/TILEMAP.tscn" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://dyvna0fwiginy" path="res://scenes/white_ghost.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://dm4hc3k5u5rph" path="res://black_ghost.tscn" id="4_iywne"]
+[ext_resource type="PackedScene" uid="uid://c27fctxw2d8sn" path="res://blue_ghost.tscn" id="5_p57ef"]
 
 [node name="Game" type="Node2D"]
 
@@ -13,3 +16,12 @@ position = Vector2(151, 98)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(160, 90)
+
+[node name="WhiteGhost" parent="." instance=ExtResource("3_lnu2h")]
+position = Vector2(154, 121)
+
+[node name="BlackGhost" parent="." instance=ExtResource("4_iywne")]
+position = Vector2(154, 142)
+
+[node name="BlueGhost" parent="." instance=ExtResource("5_p57ef")]
+position = Vector2(155, 165)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg7tedweyjqt0"
-path="res://.godot/imported/HELLNAHENVIRO_TILESHEET.png-e72e53aefff453fb4d8cb5bf208be64f.ctex"
+uid="uid://i4wxiie7k5p3"
+path="res://.godot/imported/GHOSTIE_01_BLUE.png-18960aa3c58dfdcb1502633fcf933361.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/HELLNAHENVIRO_TILESHEET.png"
-dest_files=["res://.godot/imported/HELLNAHENVIRO_TILESHEET.png-e72e53aefff453fb4d8cb5bf208be64f.ctex"]
+source_file="res://assets/sprites/GHOSTIE_01_BLUE.png"
+dest_files=["res://.godot/imported/GHOSTIE_01_BLUE.png-18960aa3c58dfdcb1502633fcf933361.ctex"]
 
 [params]
 

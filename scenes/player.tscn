@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://djkk8rkw5x3xv"]
 
-[ext_resource type="Texture2D" uid="uid://deajf23ww6322" path="res://assets/GRIMMIE_SCYTHE-Sheet.png" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://deajf23ww6322" path="res://assets/sprites/GRIMMIE_SCYTHE-Sheet.png" id="1_4flbx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
@@ -74,7 +74,7 @@ radius = 6.708204
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_n7ghd")
 autoplay = "default"
-frame_progress = 0.7702405
+frame_progress = 0.92789835
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_nvl01")
