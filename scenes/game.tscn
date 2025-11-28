@@ -16,6 +16,7 @@ offset = Vector2(160, 90)
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(160, 95)
+motion_mode = 1
 
 [node name="Booth" parent="." instance=ExtResource("6_p57ef")]
 position = Vector2(160, 90)
@@ -24,7 +25,16 @@ position = Vector2(160, 90)
 position = Vector2(160, 123)
 
 [node name="BlackGhost" parent="." instance=ExtResource("4_iywne")]
-position = Vector2(163, 142)
+position = Vector2(160, 438)
 
 [node name="BlueGhost" parent="." instance=ExtResource("5_p57ef")]
-position = Vector2(159, 162)
+position = Vector2(160, 362)
+
+[node name="WhiteGhost2" parent="." instance=ExtResource("3_lnu2h")]
+position = Vector2(160, 283)
+
+[node name="BlackGhost2" parent="." instance=ExtResource("4_iywne")]
+position = Vector2(160, 170)
+
+[node name="BlueGhost2" parent="." instance=ExtResource("5_p57ef")]
+position = Vector2(160, 220)
