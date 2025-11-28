@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c23s1t6vuxxby"]
+[gd_scene load_steps=8 format=3 uid="uid://c23s1t6vuxxby"]
 
 [ext_resource type="PackedScene" uid="uid://djkk8rkw5x3xv" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://rxp5xg5plyny" path="res://scenes/TILEMAP.tscn" id="1_yqjtg"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dm4hc3k5u5rph" path="res://scenes/black_ghost.tscn" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://c27fctxw2d8sn" path="res://scenes/blue_ghost.tscn" id="5_p57ef"]
 [ext_resource type="PackedScene" uid="uid://ngi2xuktgc7n" path="res://scenes/booth.tscn" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://qncgeibev141" path="res://scenes/heaven_gate.tscn" id="7_u5sy4"]
 
 [node name="Game" type="Node2D"]
 
@@ -38,3 +39,6 @@ position = Vector2(160, 170)
 
 [node name="BlueGhost2" parent="." instance=ExtResource("5_p57ef")]
 position = Vector2(160, 220)
+
+[node name="HeavenGate" parent="." instance=ExtResource("7_u5sy4")]
+position = Vector2(78, 61)
