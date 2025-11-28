@@ -1,25 +1,65 @@
-[gd_scene load_steps=5 format=3 uid="uid://dm4hc3k5u5rph"]
+[gd_scene load_steps=7 format=3 uid="uid://dm4hc3k5u5rph"]
 
 [ext_resource type="Script" uid="uid://b4bhdek7j2s5n" path="res://scripts/Ghost.gd" id="1_s6bqc"]
 [ext_resource type="Texture2D" uid="uid://sk42rypo3lip" path="res://assets/sprites/GHOSTIE_01_BLACK.png" id="2_s6bqc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s6bqc"]
-size = Vector2(10, 14)
+[sub_resource type="Animation" id="Animation_ab7dr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_be46r"]
-radius = 4.0
+[sub_resource type="Animation" id="Animation_cbdei"]
+resource_name = "bobbing"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1000000, 1000000),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1x3pd"]
+_data = {
+&"RESET": SubResource("Animation_ab7dr"),
+&"bobbing": SubResource("Animation_cbdei")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cbdei"]
 
 [node name="BlackGhost" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_s6bqc")
+metadata/_custom_type_script = "uid://b4bhdek7j2s5n"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_s6bqc")
 
-[node name="QueueShape" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 6)
-shape = SubResource("RectangleShape2D_s6bqc")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_1x3pd")
+}
+autoplay = "bobbing"
+speed_scale = 1.1
 
-[node name="InteractShape" type="CollisionShape2D" parent="."]
-position = Vector2(-2, -8)
-shape = SubResource("CircleShape2D_be46r")
+[node name="Body" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cbdei")
+
+[node name="InteractionRaycast" type="RayCast2D" parent="."]
+target_position = Vector2(0, -12)
